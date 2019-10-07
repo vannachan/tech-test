@@ -1,0 +1,199 @@
+//====================
+// Footer Section
+//====================
+footer {
+    width: 100%;
+    background-color: $footerBackground;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    }
+
+    h4, p {
+        margin: 0;
+    }
+
+    h4, p, a {
+        color: $primary;
+    }
+
+    p {
+        padding-top: 5px;
+    }
+
+}
+
+.hy-tech {
+    width: 33%;
+}
+
+.footer-links {
+    padding-left: 20px;
+    width: 17%;
+
+    li {
+        padding-bottom: 5px;
+    }
+    
+    a {
+        transition: all 0.5s;
+    }
+
+    li:hover a,
+    li:focus a {
+        color: $primaryAccent;
+    }
+}
+
+.newsletter {
+    width: 50%;
+
+    p {
+        padding-bottom: 15px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    input[type=email] {
+        width: 65%;
+        height: 40px;
+        border: none;
+        padding: 0 0 0 15px;
+    }
+
+    input[type=submit] {
+        border: none;
+        color: $primary;
+        background-color: $primaryAccent;
+        width: calc(35% - 4px);
+        height: 40px;
+        margin-left: 4px;
+        transition: background-color 0.7s;
+    }
+
+    input[type=submit]:hover,
+    input[type=submit]:focus {
+        background-color: darken($primaryAccent, 15%);
+    }
+}
+
+
+//====================
+// Copyright Section
+//====================
+.copyright {
+    width: 100%;
+    background-color: $footerSecondary;
+
+    .wrapper {
+        padding: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    
+    li {
+        padding-left: 10px;
+    }
+    
+    i:hover,
+    i:focus {
+        animation: wiggle 1s infinite;
+        color: $primaryAccent;
+    }
+}
+
+
+
+//====================
+// Keyframes
+//====================
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(25deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+//====================
+// Media Queries
+//====================
+@media (max-width: 1040px) {
+    .hy-tech {
+        width: 50%;
+    }
+    
+    .footer-links {
+        width: 50%;
+        
+        li {
+            text-align: right;
+
+        }
+    }
+
+    .newsletter {
+        width: 100%;
+
+        h4 {
+            padding-top: 30px;
+        }
+        input[type=email] {
+            width: 275px;
+        }
+
+        input[type=submit] {
+            width: 150px;
+        }
+
+    }
+}
+
+@media (max-width: 540px) {
+    .hy-tech {
+        width: 70%;
+    }
+    
+    .footer-links {
+        width: 30%;
+    }
+    
+    .newsletter {
+
+        input[type=email] {
+            width: 70%;
+        }
+
+        input[type=submit] {
+            width: calc(30% - 4px);
+        }
+
+    }
+}
+
+@media (max-width: 470px) {
+    .newsletter {
+
+        input[type=email] {
+            width: 60%;
+        }
+
+        input[type=submit] {
+            width: calc(40% - 4px);
+        }
+
+    }
+}

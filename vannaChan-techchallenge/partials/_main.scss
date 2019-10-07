@@ -1,0 +1,247 @@
+//====================
+// Welcome Section
+//====================
+.welcome {
+    width: 100%;
+    min-height: 600px;
+    background: $mainBackground;
+    text-align: center;
+    
+    h3 {
+        margin-top: 0;
+        padding-top: 70px;
+    }
+
+    .gallery-flexContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .gallery-prev,
+        .gallery-next {
+            color: $primaryBlack;
+            width: 20%;
+            padding-bottom: 110px;
+            position: relative;
+            
+            span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: all 0.7s ease-out;
+            }
+        }
+
+        .gallery-prev:hover,
+        .gallery-prev:focus {
+        
+            color: $primaryBlack;
+
+            .prev {
+                top: 0;
+                left: -30px;
+            }
+        }
+        
+        .gallery-next:hover,
+        .gallery-next:focus {
+            color: $primaryBlack;
+
+            .next {
+                top: 0;
+                left: 30px;
+            }
+        }
+    }
+
+    figure {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+    }
+}
+
+//====================
+// Part Time Section
+//====================
+.part-time {
+    margin: 70px 0;
+
+    .pt-flexContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    figure {
+        width: calc(50% - 13px);
+        margin-top: 26px;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .start-date {
+        position: absolute;
+        background: $primaryAccent;
+        color: $primary;
+        padding: 0 15px;
+        right: 35px;
+        bottom: 190px;
+    }
+
+    figure:hover .start-date,
+    figure:focus .start-date {
+        animation: zoom 1.5s 1;
+    }
+
+    figcaption {
+        background: $mainBackground;
+        width: 100%;
+        min-height: 220px;
+        padding: 0 30px;
+    }
+
+    h3 {
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    a {
+        color: $primaryAccent;
+        margin-bottom: 30px;
+        transition: all 0.7s;
+    }
+
+    a:hover,
+    a:focus {
+        text-shadow: 3px 3px 3px $primaryAccent;
+    }
+    
+}
+
+//====================
+// Keyframes 
+//====================
+@keyframes zoom {
+    0% { transform: scale(1); }
+    33% { transform: scale(1.2); }
+    66% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+//====================
+// Media Queries
+//====================
+@media (max-width: 1200px) {
+    .welcome {
+        .gallery-flexContainer {
+    
+            .gallery-prev,
+            .gallery-next {
+                width: 7.5%;
+            }
+    
+            figure {
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1040px) {
+    .part-time {
+        figcaption {
+            min-height: 250px;
+        }
+
+        .start-date {
+            bottom: 220px;
+        }
+    }
+}
+
+@media (max-width: 925px) {
+    .part-time {
+        figcaption {
+            min-height: 300px;
+        }
+
+        .start-date {
+            bottom: 270px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .part-time {
+        .pt-flexContainer {
+            justify-content: center;
+        }
+        
+        figure {
+            width: 80%;
+        }
+
+        figcaption {
+            min-height: 250px;
+        }
+        .start-date {
+            bottom: 220px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .welcome {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .part-time {
+        figure {
+            width: 100%;
+        }
+
+        figcaption {
+            min-height: 280px;
+        }
+
+        .start-date {
+            bottom: 250px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+    .part-time {
+        figcaption {
+            min-height: 300px;
+        }
+
+        .start-date {
+            bottom: 270px;
+        }
+    }
+}
